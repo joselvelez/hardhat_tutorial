@@ -7,6 +7,9 @@ const key = 'your_private_key';
 */
 const { key } = require("./private_key")
 
+// Import the faucet task to add add funds to an address for testing
+require('./tasks/faucet');
+
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */

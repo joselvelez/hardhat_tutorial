@@ -2,7 +2,7 @@ pragma solidity ^0.8.0;
 
 contract Token {
     string public name = "My Hardhat Token";
-    string public symbol = "MBT";
+    string public symbol = "MHT";
     uint public totalSupply = 1000000;
     address public owner;
     mapping(address => uint) balances;
@@ -11,8 +11,8 @@ contract Token {
     constructor() {
         // The total supply is assigned to the transaction sender,
         // which is the account that is deploying the contract
+        balances[msg.sender] = totalSupply;
         owner = msg.sender;
-        balances[owner] = totalSupply;
     }
 
     
